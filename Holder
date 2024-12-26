@@ -1,9 +1,9 @@
-local GUI = game:GetService("CoreGui"):FindFirstChild("STX_Nofitication")
+local GUI = game.Players.LocalPlayer.PlayerGui:FindFirstChild("STX_Nofitication") or game.Players.LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("STX_Nofitication")
 if not GUI then
     local STX_Nofitication = Instance.new("ScreenGui")
     local STX_NofiticationUIListLayout = Instance.new("UIListLayout")
     STX_Nofitication.Name = "STX_Nofitication"
-    STX_Nofitication.Parent = game.CoreGui
+    STX_Nofitication.Parent = game.Players.LocalPlayer.PlayerGui or game.Players.LocalPlayer:WaitForChild("PlayerGui")
     STX_Nofitication.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     STX_Nofitication.ResetOnSpawn = false
     
